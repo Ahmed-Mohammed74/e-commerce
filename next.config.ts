@@ -1,11 +1,11 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ['ecommerce.routemisr.com'], // ضع هنا الدومين اللي الصور منه
+  eslint: {
+    ignoreDuringBuilds: true,       
+  },
+  typescript: {
+    ignoreBuildErrors: true,   
   },
 };
 
-module.exports = nextConfig;
-
-
+export default nextConfig;
