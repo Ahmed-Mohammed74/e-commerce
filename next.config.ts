@@ -1,10 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ecommerce.routemisr.com",
+      },
+    ],
+  },
   eslint: {
-    ignoreDuringBuilds: true,       
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true,   
+    ignoreBuildErrors: true,
   },
 };
 
