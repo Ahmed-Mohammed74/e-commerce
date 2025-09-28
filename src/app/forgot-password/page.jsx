@@ -24,7 +24,7 @@ const ForgetPass = () => {
       setSucessMsg(res.data.message);
       setLooding(false);
       setTimeout(() => {
-        router.push("/forgot-password/code"); // رابط الصفحة الجديدة للتحقق
+        router.push("/forgot-password/code");     
       }, 1000);
     } catch (err) {
       setSucessMsg(null);

@@ -5,7 +5,7 @@ import { DeleteCartItem } from "../../CartAction/DeleteCartItem";
 import { toast } from "sonner";
 
 export default function Cart() {
-  const [cart, setCart] = useState<any[]>([]); // دايمًا مصفوفة
+  const [cart, setCart] = useState<any[]>([]);   
   const [totalPrice, setTotalPrice] = useState<number>(0);
   const [loading, setLoading] = useState(true);
 
@@ -13,7 +13,7 @@ export default function Cart() {
     const fetchCart = async () => {
       try {
         const data = await getUserCartAction();
-        setCart(data?.products || []); // حماية من undefined
+        setCart(data?.products || []); 
         setTotalPrice(data?.totalCartPrice || 0);
       } catch (err: any) {
         toast.error(err.message || "Failed to load cart");
@@ -50,7 +50,7 @@ export default function Cart() {
         Total Price: ${totalPrice}
       </p>
 
-      {cart && cart.length > 0 ? ( // حماية من undefined
+      {cart && cart.length > 0 ? (
         cart.map((item) => (
           <div
             key={item._id}

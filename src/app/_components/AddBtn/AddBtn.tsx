@@ -27,7 +27,7 @@ const AddBtn = ({ id }: { id: string }) => {
         duration: 1000,
         position: "top-center",
       });
-      router.refresh(); // يعيد render للصفحة لتحديث الـ cart
+      router.refresh();
     } else if (data.message === "Please login first") {
       toast.error("You must login first!", {
         duration: 1500,

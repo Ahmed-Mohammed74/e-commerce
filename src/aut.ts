@@ -10,7 +10,6 @@ export const authOptions = {
         password: {},
       },
       async authorize(credentials) {
-        // اعمل الـ login API call بتاعك هنا
         const res = await fetch(
           "https://ecommerce.routemisr.com/api/v1/auth/signin",
           {

@@ -42,7 +42,7 @@ export default function Register() {
         position: "top-center",
         duration: 3000,
       });
-      router.push("/login"); // بعد التسجيل يروح للـ login
+      router.push("/login");     
     } catch (err: any) {
       toast.error(err.message || "Signup failed", {
         position: "top-center",
